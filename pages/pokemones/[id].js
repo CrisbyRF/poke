@@ -18,6 +18,7 @@ const Pokemon = ({ data }) => {
 export default Pokemon
 
 export const getStaticProps = async ({ params }) => {
+    console.log(params)
     const FETCH_POKE = `https://pokeapi.co/api/v2/pokemon/${params.id}`
     const response = await fetch(FETCH_POKE)
     const data = await response.json()
